@@ -70,7 +70,6 @@ exports.consumer_create_post = [
                 res.status(400).json({message: err.message});
             }
             res.status(200).redirect(consumer.url);
-        })
-
+        });
     },
-]
+];
