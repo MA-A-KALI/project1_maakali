@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "$ENV:DEBUG = 'project1_maakali:*'; npm start",
+    "node": "nodemon www.js",
     "lint": "eslint ./"
   },
   "dependencies": {
@@ -17,9 +18,10 @@
     "mongoose": "^6.2.10",
     "morgan": "~1.9.1",
     "multer-gridfs-storage": "^5.0.2",
-    "nodemon": "^2.0.15"
+    "pug": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "^8.12.0"
+    "eslint": "^8.12.0",
+    "nodemon": "^2.0.15"
   }
 }

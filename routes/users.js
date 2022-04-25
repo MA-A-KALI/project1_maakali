@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-const Cv = require('../models/cv');
+
 
 /* GET users listing. */
 router.get('/', function(req, res, /*next*/) {

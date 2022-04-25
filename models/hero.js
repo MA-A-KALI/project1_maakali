@@ -9,7 +9,7 @@ var HeroSchema = new Schema(
         email: {type: String, required: true, maxlength: 100},
         service: {type: Schema.Types.ObjectId, ref: 'Service', required: true},
         cv: {
-            file: {type: Buffer, required: false},
+            file: {type: 'Buffer', required: false},
             filename: {type: String, required: false},
         }
     }
