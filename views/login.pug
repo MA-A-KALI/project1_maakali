@@ -1,0 +1,17 @@
+form(action='/consumer_login' method='post')
+  .container
+    h1 Login
+    p Please fill in this form to Login.
+    hr
+    label(for='username')
+      b Email
+    input#username(type='text' placeholder='Enter Username' name='username' required='')
+    label(for='email')
+      b Password
+    input#password(type='password' placeholder='Enter Password' name='password' required='')
+    button(type='submit') Login
+  .container.signin
+    p
+      | Already have an account? 
+      a(href='#') Sign in
+      | .

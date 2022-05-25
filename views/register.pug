@@ -1,0 +1,20 @@
+form(action='/consumer_register' method='post')
+  .container
+    h1 Register
+    p Please fill in this form to create an account.
+    hr
+    label(for='username')
+      b Email
+    input#username(type='text' placeholder='Enter Username' name='username' required='')
+    label(for='email')
+      b Email
+    input#email(type='text' placeholder='Enter Email' name='email' required='')
+    label(for='psw')
+      b Password
+    input#password(type='password' placeholder='Enter Password' name='password' required='')
+    button(type='submit') Register
+  .container.signin
+    p
+      | Already have an account? 
+      a(href='#') Sign in
+      | .

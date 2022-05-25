@@ -71,7 +71,7 @@ exports.consumer_login_post = async function(req, res) {
         }, process.env.ACCESS_TOKEN_SECRET
         );
 
-        return res.json({ status: 'ok', data: token });
+        return res.cookie('token', token, {}).cookie('hero', false).status(200).redirect('/');
     }
 
     res.json({ status: 'error', error: 'Invalid username/password'})
@@ -96,6 +96,6 @@ exports.consumer_update_data = function(req, res) {
 }
 
 exports.consumer_logout = function(req, res) {
-    res.cookie('jwt', '', { maxAge: 1});
+    res.cookie('token', '', { maxAge: 1});
     res.redirect('/');
 }

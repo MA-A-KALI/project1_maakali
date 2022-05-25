@@ -21,7 +21,8 @@
     "mongoose": "^6.2.10",
     "morgan": "~1.9.1",
     "multer-gridfs-storage": "^5.0.2",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "^8.12.0"
