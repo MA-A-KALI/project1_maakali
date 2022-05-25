@@ -1,0 +1,28 @@
+const Hero = require('../models/hero');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt-nodejs');
+
+const JWT_SECRET = 'THIS_IS_A_SECRET';
+
+exports.hero_register_post = async function(req, res) {
+    const { first_name, last_name, email, service, password } = req.body
+
+    const heroCheckEmail = await Hero.findOne({ email });
+
+    if(heroCheckEmail) {
+        res.json({status: 'error', error: 'Email has been taken'});
+    } else if(!heroCheckEmail) {
+        try {
+            const hero = await Hero.create({
+                first_name,
+                last_name,
+                email,
+                service,
+                password
+            });
+            res.json({status: 'ok', hero});
+        } catch (error) {
+            res.json({status: 'error', error: error.message});
+        }
+    }
+}

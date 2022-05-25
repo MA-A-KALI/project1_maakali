@@ -4,9 +4,11 @@ var Schema = mongoose.Schema;
 
 var ConsumerSchema = new Schema(
     {
-        name: {type: String, required: true, maxlength: 100},
-        email: {type: String, required: true, maxlength: 100},
+        username: {type: String, required: true, maxlength: 100, unique:true},
+        email: {type: String, required: true, maxlength: 100, unique: true},
         password: {type: String, required: true},
+        description: {type: String, maxlength: 100},
+        user_img: {type: String},
         job_posted: {type: Schema.Types.ObjectId, ref: 'Job'}
     }
 );

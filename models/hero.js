@@ -7,7 +7,13 @@ var HeroSchema = new Schema(
         first_name: {type: String, required: true, maxlength: 100},
         last_name: {type: String, required: true, maxlength: 100},
         email: {type: String, required: true, maxlength: 100},
-        service: {type: Schema.Types.ObjectId, ref: 'Service', required: true},
+        service: {type: String, required: true, enum:[
+            'Web Programming',
+            'Design Graphic',
+            'Writing',
+            'Service and Repair',
+            'Sales and Marketing',
+        ]},
         password: {type: String, required: true},
         cv: {
             file: {type: 'Buffer', required: false},

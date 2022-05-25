@@ -11,9 +11,12 @@ var app = express();
 
 // set up mongoose
 var mongoose = require('mongoose');
-//var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0.a9azn.mongodb.net/local_library?retryWrites=true';
-var mongoDB = 'mongodb+srv://cooluser:coolpassword@cluster0.a9azn.mongodb.net/local_library?retryWrites=true';
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+
+var mongoDB = 'mongodb://127.0.0.1:27017/tutorial_dev';
+mongoose.connect(mongoDB, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+})
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
