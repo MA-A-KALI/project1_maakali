@@ -1,0 +1,23 @@
+form(action='/hero/hero_register' method='post')
+  .container
+    h1 Register
+    p Please fill in this form to create an account.
+    hr
+    label(for='first_name')
+      b First Name
+    input#username(type='text' placeholder='Enter First Name' name='first_name' required='')
+    label(for='last_name')
+      b First Name
+    input#username(type='text' placeholder='Enter last Name' name='last_name' required='')
+    label(for='email')
+      b Email
+    input#email(type='text' placeholder='Enter Email' name='email' required='')
+    label(for='psw')
+      b Password
+    input#password(type='password' placeholder='Enter Password' name='password' required='')
+    button(type='submit') Register
+  .container.signin
+    p
+      | Already have an account? 
+      a(href='#') Sign in
+      | .

@@ -1,0 +1,283 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1, p{
+    font-family: 'Poppins';
+}
+
+a {
+color: rgb(89, 88, 88);
+text-decoration: none;
+font-family: 'Poppins'
+}
+
+button {
+color: rgb(89, 88, 88);
+text-decoration: none;
+font-family: 'Poppins'
+}
+
+.logo-image {
+    width: 40px;
+}
+
+.logo-name {
+font-size: 24px;
+font-weight: bold;
+width: 100%;
+margin-left: 20px;
+}
+
+.nav-wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+}
+
+#navbar {
+    top: 0;
+    width: 100%;
+
+  }
+
+#navbar a{
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+
+nav{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+}
+
+
+nav .button-login {
+    color: white;
+    margin-left: 20px;
+    display: inline-block;
+    border: none;
+    background-color: #FFB82C;
+    border-radius: 12px;
+    padding: 4px 24px;
+    font-weight: 700;
+}
+
+.about{
+    background-color: #FFB82C;
+    background-size: 100%;
+    height: 100vh;
+    align-items: center;
+   
+}
+
+.about img{
+    position: absolute;
+    padding-left: 10%;
+    padding-top: 12%;
+    width: 30%;
+}
+
+
+.about h1, .about p{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Poppins';
+    padding-left: 50%;
+    
+}
+
+.about h1{
+    font-weight: bold;
+    padding-top: 20%;
+    font-size: 40px;
+}
+
+.about p{
+    width: 40%;
+    font-weight: 700px;
+    padding-top: 25%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.about .button-more{
+    position: absolute;
+    right: 11%;
+    bottom: 30%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: #FFB82C;
+    padding: 4px 20px;
+}
+
+.services{
+    height: 50vh;
+}
+
+.services h1{
+    color: rgb(89, 88, 88);
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.services p{
+    color: rgb(89, 88, 88);
+    font-family: 'Poppins';
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.services .icon-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 3%;
+}
+
+.services .icon-wrapper img{
+    height: 100px;
+    width: 150px;
+}
+
+.services .button-explore {
+    color: white;
+    margin-top: 1%;
+    margin-left: 71.5%;
+    display: inline-block;
+    border: none;
+    background-color: #FFB82C;
+    border-radius: 12px;
+    padding: 6px 24px;
+    font-weight: 700;
+}
+
+hr{
+    width: 65%;
+    padding: 0.5px 0.5px;
+    background-color: rgb(89, 88, 88);
+    
+}
+
+.talent{
+    height: 50vh;
+    display: flex;
+    margin-left: 210px;
+    margin-right: 290px;
+}
+.talent h1, .talent p{
+    color: rgb(89, 88, 88);
+}
+
+.talent h1{
+    padding-top: 1%;
+    width: 55%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.talent img{
+    width: 175%;
+}
+
+.talent p{
+    width: 65%;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.become-a-talent{
+    color: #FFE61A;
+}
+
+.join-with-us{
+    color: #B6FD83;
+}
+
+.talent .become-a-talent-button{
+    color: white;
+    display: inline-block;
+    border: none;
+    background-color: #FFB82C;
+    border-radius: 12px;
+    padding: 6px 24px;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #F3F3F3;
+    height: 40vh;
+    color: rgb(89, 88, 88);
+}
+
+.footer-wrapper{
+    display: flex;
+    margin-left: 210px;
+    padding-top: 30px;
+}
+
+.company p{
+    width:90%;
+    text-align: justify;
+    padding-right: 450px;
+}
+
+.logo-and-company-name{
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logo-and-company-name h1{
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.logo-and-company-name img{
+    width: 40px;
+    height: 53px;
+}
+
+.contact{
+    padding-top: 5px;
+    width: 100%;
+}
+
+.contact .data-contact{
+    padding-top: 8px;
+    width: 100%;
+}
+
+.contact .title{
+    font-weight: 700;
+}
+
+.rules{
+    padding-top: 20px;
+    font-weight: 700;
+    width: 100%;
+}

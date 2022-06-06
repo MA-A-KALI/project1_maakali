@@ -46,8 +46,8 @@ exports.consumer_register_post = async function(req, res) {
             consumer.email = email;
             consumer.description = description;
             consumer.password = consumer.encryptPassword(password);
-    
-            consumer.save();
+
+            await consumer.save();
             return res.status(200).redirect('/'); //json({status: "New User has Been Added!", username: username, email: email});
         } catch(error) {
             return res.json(error);
