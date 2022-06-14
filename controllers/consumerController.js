@@ -61,7 +61,7 @@ exports.consumer_login_post = async function(req, res) {
     const consumer = await Consumers.findOne({ username }).lean()
 
     if(!consumer) {
-        return res.json({ status: 'error', error: 'Invalid username/password'});
+        return res.json({ status: 'error', error: 'Invalid username'});
     }
 
     if (bcrypt.compareSync(password, consumer.password)) {

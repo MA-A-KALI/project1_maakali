@@ -1,19 +1,29 @@
 var bcrypt = require('bcrypt-nodejs');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+const Pendidikan = require('./pendidikan');
 
 var HeroSchema = new Schema(
     {
-        first_name: {type: String, required: true, maxlength: 100},
-        last_name: {type: String, required: true, maxlength: 100},
+        nama: {type: String, required: true, maxlength: 100},
         email: {type: String, required: true, maxlength: 100},
-        service: {type: String, required: false, enum:[
-            'Web Programming',
-            'Design Graphic',
-            'Writing',
-            'Service and Repair',
-            'Sales and Marketing',
+        no_handphone: {type: String, maxlength: 100},
+        tanggal_lahir: {type: Date},
+        gender: {type: String, enum: [
+            'Laki-laki',
+            'Perempuan'
         ]},
+        deskripsi_profile: {type: String},
+        personal_link: [{
+            type: String
+        }],
+        profesi: {},
+        skill: [{
+            type: String
+        }],
+        pendidikan: [{
+            type: Schema.Types.ObjectId, ref: "Pendidikan"
+        }],
         password: {type: String, required: true},
         cv: {
             file: {type: 'Buffer', required: false},
