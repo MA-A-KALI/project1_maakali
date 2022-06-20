@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var PendidikanSchema = new Schema(
     {
         kampus: {type: String},
-        Jurusan: {type: String},
+        jurusan: {type: String},
         gelar: {type: String},
         tahun_lulus: {type: Date}
     }

@@ -1,7 +1,6 @@
 var bcrypt = require('bcrypt-nodejs');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-const Pendidikan = require('./pendidikan');
 
 var HeroSchema = new Schema(
     {
@@ -17,17 +16,20 @@ var HeroSchema = new Schema(
         personal_link: [{
             type: String
         }],
-        profesi: {},
+        profesi: {type: String},
         skill: [{
             type: String
         }],
         pendidikan: [{
-            type: Schema.Types.ObjectId, ref: "Pendidikan"
+            type: Schema.Types.ObjectId, ref: 'Pendidikan'
+        }],
+        pengalaman_kerja: [{
+            type: Schema.Types.ObjectId, ref: "PengalamanKerja"
         }],
         password: {type: String, required: true},
-        cv: {
-            file: {type: 'Buffer', required: false},
-            filename: {type: String, required: false},
+        foto: {
+            data: Buffer,
+            contentType: String
         }
     }
 );
