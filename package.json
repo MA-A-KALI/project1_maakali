@@ -1,6 +1,7 @@
 {
   "name": "project1-maakali",
   "version": "0.0.0",
+  "main": "./bin/www",
   "private": true,
   "scripts": {
     "start": "nodemon .bin/www",
