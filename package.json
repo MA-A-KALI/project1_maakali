@@ -4,7 +4,7 @@
   "main": "./bin/www",
   "private": true,
   "scripts": {
-    "start": "nodemon .bin/www",
+    "start": "node ./bin/www",
     "devstart": "$ENV:DEBUG = 'project1_maakali:*'; npm start",
     "lint": "eslint ./",
     "start-dev": "nodemon ./bin/www"
